@@ -130,7 +130,7 @@ def font_supports_alphabet(filepath, alphabet):
     font = PIL.ImageFont.truetype(filepath)
     try:
         for character in alphabet:
-            font.getsize(character)
+            font.getbbox(character)
     # pylint: disable=bare-except
     except:
         return False
